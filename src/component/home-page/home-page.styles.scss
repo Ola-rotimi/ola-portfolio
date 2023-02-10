@@ -1,0 +1,47 @@
+.homepage-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 80px;
+
+    .intro{
+        background-color: #F7EFE5;
+        padding: 20px 80px;
+        margin: 0 0 30px;
+        width: 100%;
+
+
+        h1{
+            font-size: 38px;
+            margin: 0 0 30px;
+        }
+
+        h2{
+            font-size: 28px;
+            margin: 0 0 30px;
+        }
+        p{
+            font-size: 18px;
+            margin: 0 0 30px;
+        }
+    }
+
+    .social-links{
+        display: flex;
+        justify-content: center;
+        margin: 0 0 30px;
+
+        a{
+            margin: 0 10px;
+            background-color: transparent;
+            color: orange;
+
+            &:hover{
+                background-color: darken($color: #F7EFE5, $amount: 15%);
+                color: darken($color: orange, $amount: 15%);
+            }
+        }
+    }
+
+    
+}
