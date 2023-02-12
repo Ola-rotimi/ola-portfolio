@@ -1,47 +1,212 @@
-.homepage-container{
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 80px;
+  height: 80vh;
+  background-color: #e8e2e2;
+  margin: auto;
+  width: 100%;
+
+  .profile-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 20px 80px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 
-    .intro{
-        background-color: #F7EFE5;
-        padding: 20px 80px;
-        margin: 0 0 30px;
+    .intro {
+      margin-top: 20px;
+      padding: 20px;
+      margin-right: 20px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #333;
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #333;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 0.15em solid #ffde00;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 3.5s steps(40, end), blink-caret 1s step-end infinite,
+        appear 3.5s;
+
+      span {
+        color: #ffde00;
+
+        &:hover {
+          color: darken($color: #ffde00, $amount: 15%);
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 30px;
+      font-weight: 500;
+      color: #333;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 0.15em solid #ffde00;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 7s steps(40, end), blink-caret 1s step-end infinite,
+        appear 7s;
+
+      span {
+        color: #ffde00;
+
+        &:hover {
+          color: darken($color: #ffde00, $amount: 15%);
+        }
+      }
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+      img {
         width: 100%;
-
-
-        h1{
-            font-size: 38px;
-            margin: 0 0 30px;
-        }
-
-        h2{
-            font-size: 28px;
-            margin: 0 0 30px;
-        }
-        p{
-            font-size: 18px;
-            margin: 0 0 30px;
-        }
+        height: 100%;
+        border-radius: 50%;
+      }
     }
+  }
 
-    .social-links{
-        display: flex;
-        justify-content: center;
-        margin: 0 0 30px;
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 
-        a{
-            margin: 0 10px;
-            background-color: transparent;
-            color: orange;
+    button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      border-radius: 50%;
+      background-color: transparent;
+      color: #ffde00;
+      font-size: 1.5rem;
+      font-weight: 600;
+      transition: all 0.5s ease-in-out;
+      border: none;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
-            &:hover{
-                background-color: darken($color: #F7EFE5, $amount: 15%);
-                color: darken($color: orange, $amount: 15%);
-            }
+      &:hover {
+        background-color: darken($color: #ffde00, $amount: 15%);
+        color: #e8e2e2;
+
+        a {
+          color: #e8e2e2;
         }
-    }
+      }
 
-    
+      a {
+        color: #ffde00;
+        text-decoration: none;
+
+        &:hover {
+          color: #e8e2e2;
+        }
+      }
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .homepage-container {
+    padding: 20px 20px;
+
+    .profile-info {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .profile-image {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-container {
+    padding: 20px 20px;
+
+    .profile-info {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .profile-image {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
 }

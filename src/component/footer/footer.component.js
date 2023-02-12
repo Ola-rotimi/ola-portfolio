@@ -1,7 +1,9 @@
-export const Footer = () => {
-    return (
-        <div className="footer-container">
-            <p>© {(new Date()).getFullYear} Olarotimi Adamson</p>
-        </div>
-    )
-}
+const Footer = () => {
+  return (
+    <div className="footer-container">
+      <p>© {new Date().getFullYear} Olarotimi Adamson</p>
+    </div>
+  );
+};
+
+export default Footer;

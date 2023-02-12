@@ -2,10 +2,9 @@ import { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 import "./nav-bar.styles.scss";
-import { ReactComponent as Logo } from "../../assets/olarotimi-logo.png";
-import Footer from "../../component/footer/footer.component";
+import Logo from "../../assets/olarotimi-logo.png";
 
-export const NavBar = () => {
+const NavBar = () => {
     return (
         <Fragment>
             <div className="nav-bar">
@@ -22,7 +21,8 @@ export const NavBar = () => {
                 </div>
             </div>
             <Outlet />
-            <Footer />
         </Fragment>
     )
 }
+
+export default NavBar;
