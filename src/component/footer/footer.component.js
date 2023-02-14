@@ -1,7 +1,12 @@
+import "./footer.styles.scss"
+
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <div className="footer-container">
-      <p>© {new Date().getFullYear} Olarotimi Adamson</p>
+      <p>© {year} Olarotimi Adamson</p>
     </div>
   );
 };

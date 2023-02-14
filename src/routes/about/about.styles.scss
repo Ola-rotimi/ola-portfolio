@@ -1,0 +1,29 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  .about-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .about-description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    width: 80%;
+
+    span {
+      font-weight: 600;
+      color: #ff0000;
+
+      &:hover {
+        cursor: pointer;
+        color: darken($color: #ff0000, $amount: 15%);
+      }
+    }
+  }
+}

@@ -6,28 +6,33 @@
   width: 100%;
   height: 100%;
   padding: 0 20px;
-  background-color: #ffffe8;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 0 10px 0 #ffffe8;
-  
+  background-color: #f2e7d5;
+  box-shadow: 0 0.75px 10px 10px #f2e7d5;
+  overflow: hidden;
+
   .logo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     width: 100%;
     height: 100%;
     padding: 0 20px;
-    background-color: #ffffe8;
+    background-color: #f2e7d5;
 
     img {
       width: 100px;
       height: 100px;
       padding: 0 10px;
+      background-color: #20262e;
     }
   }
 
-  .nav-links {
+  .hamburger {
+    display: none;
+  }
+
+  .links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,81 +40,146 @@
     float: right;
     width: 100%;
     height: 100%;
-    padding: 0 20px;
-    background-color: #ffffe8;
-    color: #ffde00;
+    padding: 20px;
+    background-color: #f2e7d5;
+    color: #20262e;
+    margin: 0 20px;
 
     a {
       text-decoration: none;
-      color: #ffde00;
+      color: #20262e;
       font-size: 1.5rem;
       font-weight: 600;
-      padding: 0 10px;
+      padding: 5px 10px;
       transition: all 0.5s ease-in-out;
-
+      border-radius: 5px;
 
       &:hover {
-        background-color: darken($color: #ffffe8, $amount: 15%);
-        color: darken($color: #ffde00, $amount: 15%);
-        box-shadow: 0 0 10px 0 #ffde00;
+        background-color: darken($color: #f2e7d5, $amount: 15%);
+        color: lighten($color: #20262e, $amount: 15%);
+        box-shadow: 0 0 10px 0 #20262e;
+        animation: all 0.5s ease-in-out;
+      }
+
+      &:active {
+        background-color: darken($color: #f2e7d5, $amount: 15%);
+        color: lighten($color: #20262e, $amount: 15%);
+        box-shadow: 0 0 10px 0 #20262e;
         animation: all 0.5s ease-in-out;
       }
     }
   }
 }
 
-@media screen and (max-width:500px) {
-  .nav-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 20px;
-    background-color: #ffffe8;
-    border-radius: 0 0 30px 30px;
-    box-shadow: 0 0 10px 0 #ffffe8;
+@media screen and (max-width: 700px) {
+  .nav-bar {
 
     .logo {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: left;
       width: 100%;
       height: 100%;
       padding: 0 20px;
-      background-color: #ffffe8;
+      background-color: #f2e7d5;
 
       img {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         padding: 0 10px;
+        background-color: #20262e;
       }
     }
 
-    .nav-links {
+    .logo-active{
+      position: absolute;
+      top: 0px;
+      left: 30px;
+
+      img {
+        width: 70px;
+        height: 70px;
+        padding: 0 10px;
+        background-color: #20262e;
+      }
+    }
+
+
+    .hamburger {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      float: right;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      background-color: #f2e7d5;
+      color: #20262e;
+      margin: 0 20px;
+      cursor: pointer;
+      top: 10px;
+      right: 0px;
+      position: absolute;
+      animation: all 0.5s ease-in-out;
+    }
+
+    .hamburger-active{
+      display: flex;
+      flex-direction: row;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      background-color: #f2e7d5;
+      color: #20262e;
+      margin: 0 20px;
+      cursor: pointer;
+      top: 10px;
+      right: 0px;
+      position: absolute;
+      animation: all 0.5s ease-in-out;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .links-active{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       float: right;
       width: 100%;
       height: 100%;
-      padding: 0 20px;
-      background-color: #ffffe8;
-      color: #ffde00;
-      overflow: hidden;
-
+      padding: 20px;
+      background-color: #f2e7d5;
+      color: #20262e;
+      animation: all 0.5s ease-in-out;
+      left: 0;
 
       a {
         text-decoration: none;
-        color: #ffde00;
+        color: #20262e;
         font-size: 1.5rem;
         font-weight: 600;
-        padding: 0 10px;
+        padding: 5px 10px;
         transition: all 0.5s ease-in-out;
+        border-radius: 5px;
+        margin: 10px 0;
 
+        &:hover {
+          background-color: darken($color: #f2e7d5, $amount: 15%);
+          color: lighten($color: #20262e, $amount: 15%);
+          box-shadow: 0 0 10px 0 #20262e;
+          animation: all 0.5s ease-in-out;
+        }
+
+        &:active {
+          background-color: darken($color: #f2e7d5, $amount: 15%);
+          color: lighten($color: #20262e, $amount: 15%);
+          box-shadow: 0 0 10px 0 #20262e;
+          animation: all 0.5s ease-in-out;
+        }      
       }
     }
   }
