@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    width: 40%;
+    width: 60%;
     height: 40px;
     border-radius: 50px;
     background-color: #fff;
@@ -11,7 +11,8 @@
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     position: fixed;
-    bottom: 100px;
+    bottom: 10px;
+    display: none;
 
 
 
@@ -34,3 +35,10 @@
         opacity: 0.75;
     }
 } 
+
+@media  screen and (max-width: 800px) {
+    .nav-icon {
+        display: flex;
+        flex-direction: row;
+    }   
+}
