@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import "./nav-bar.styles.scss";
-import Logo from "../../assets/olarotimi-logo.png";
+import Logo from "../../assets/images/olarotimi-logo.png";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
