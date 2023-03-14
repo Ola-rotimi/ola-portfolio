@@ -15,13 +15,17 @@ const Projects = () => {
                 <img src={image} alt={title} />
               </div>
               <div className="project-info">
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <a href={link} target="_blank" rel="noreferrer">
-                  <button>
-                    <ImGithub/>
-                  </button>
-                </a>
+                <div className="title">
+                  <h3>{title}</h3>
+                  <a href={link} target="_blank" rel="noreferrer">
+                    <button>
+                      <ImGithub />
+                    </button>
+                  </a>
+                </div>
+                <div className="description">
+                  <p>{description}</p>
+                </div>
               </div>
             </div>
           );
