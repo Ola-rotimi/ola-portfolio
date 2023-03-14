@@ -15,38 +15,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-bottom: 2rem;
-  
-      .project-card {
-        width: calc(33.33% - 1rem);
-        height: 100px;
-        background-color: #6b7280;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-        transition: all 0.2s ease-in-out;
-  
-        a {
-          color: #fff;
-          text-decoration: none;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-  
-          h3 {
-            margin: 1rem 0 0;
-            font-size: 1.2rem;
-            text-align: center;
-            width: auto;
-          }
-  
-          img {
-            width: 100%;
-            max-height: 10rem;
-            object-fit: contain;
-            margin-bottom: 1rem;
-          }
-        }
       }
     }
   
