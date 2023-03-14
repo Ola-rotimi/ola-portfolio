@@ -18,8 +18,8 @@ const Projects = () => {
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <a href={link} target="_blank" rel="noreferrer">
-                  <button className="icon">
-                    <ImGithub />
+                  <button>
+                    <ImGithub/>
                   </button>
                 </a>
               </div>

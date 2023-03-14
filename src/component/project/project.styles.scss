@@ -1,19 +1,87 @@
 // Define styles for the ProjectsPage component
 .projects-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  
-    h1 {
-      font-size: 2.5rem;
+
+    .project {
+      width: 90%;
+      max-width: 400px;
       margin-bottom: 2rem;
-    }
-  
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .project-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
+        a {
+          font-size: 1.2rem;
+          color: #F49D1A;
+          text-decoration: none;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: darken($color: #F49D1A, $amount: 15%);
+          }
+          
+          button {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: transparent;
+            color: #F49D1A;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              color: darken($color: #F49D1A, $amount: 15%);
+            }
+          }
+        }
       }
     }
+  }
+}
