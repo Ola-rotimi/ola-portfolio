@@ -36,7 +36,7 @@ const HomePage = () => {
         <button>
           <a
             href="
-                https://www.twitter.com/Olarotimi_"
+                https://www.twitter.com/LazyDevOla"
             target="_blank"
             rel="noopener noreferrer"
           >
