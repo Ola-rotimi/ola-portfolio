@@ -14,7 +14,7 @@ const About = () => {
           <span>Frontend Web Developer</span>. I started my Tech Journey in 2022
           , I have developed a strong passion for Frontend Development. I have a
           unique combination of {""}
-          <span>React.js, Vue.js, JavaScript and Redux</span>, and I am always
+          <span>React.js, Vue.js, JavaScript</span>, and I am always
           striving to improve and expand my knowledge in the field.
         </p>
 
